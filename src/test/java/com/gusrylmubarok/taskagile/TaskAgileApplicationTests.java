@@ -1,10 +1,10 @@
-package com.gusrylmubarok.reddit.backend;
+package com.gusrylmubarok.taskagile;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackendApplicationTests {
+class TaskAgileApplicationTests {
 
 	@Test
 	void contextLoads() {
