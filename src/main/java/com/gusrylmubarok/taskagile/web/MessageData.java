@@ -1,16 +1,11 @@
-package com.gusrylmubarok.taskagile;
+package com.gusrylmubarok.taskagile.web;
 
-public class Message {
-    
+public class MessageData {
     private String text;
-
     public String getText() {
-        return text;
+        return this.text;
     }
-
     public void setText(String text) {
         this.text = text;
     }
-
-    
 }
