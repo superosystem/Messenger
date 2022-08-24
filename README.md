@@ -6,11 +6,11 @@ through the life-cycle and practice <b>Domain-Driven Design</b> and <b>Test-Driv
 </p>
 
 ## Contents
-* [Overview](https://github.com/gusrylmubarok/task-agile-web/blob/main/LICENSE.md)
+* [Overview](https://github.com/gusrylmubarok/task-agile-web)
 * [Stories](https://github.com/gusrylmubarok/task-agile-web/blob/main/documents/USERSTORIES.md)
 * [Data Modeling](https://github.com/gusrylmubarok/task-agile-web/blob/main/documents/DATAMODELING.md)
-* [Code Design](https://github.com/gusrylmubarok/task-agile-web/blob/main/documents/CODEDESIGN.md)
-* [REST API](https://github.com/gusrylmubarok/task-agile-web/blob/main/documents/RESTAPI.md)
+* [Code Design](https://gusrylmubarok.medium.com/merancang-stabilitas-dan-ekstensibilitas-code-design-93873b933593)
+* [REST API]()
 * [Backend Side]()
 * [Frontend Side]()
 * [Monitoring]()

@@ -60,6 +60,6 @@ The followings are the user stories with the title of the Cards theme:
 
 <span align="right">
 
-[Back to Home](https://github.com/gusrylmubarok/task-agile-web/blob/main/LICENSE.md)
+[Back to Home](https://github.com/gusrylmubarok/task-agile-web)
 
 </span>
