@@ -1,0 +1,294 @@
+Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 9515
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1661334966.539][INFO]: [681209749479050f961416c6334495f9] COMMAND InitSession {
+   "capabilities": {
+      "alwaysMatch": {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [  ],
+            "w3c": true
+         }
+      }
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [  ],
+         "w3c": true
+      },
+      "name": "Test With Pageobjects"
+   }
+}
+[1661334966.540][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1661334966.540][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1661334966.540][INFO]: Launching chrome: /usr/bin/google-chrome --allow-pre-commit-input --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging=stderr --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/tmp/.com.google.Chrome.ysxS66 data:,
+
+DevTools listening on ws://127.0.0.1:34591/devtools/browser/e973e7fc-995b-49c9-813a-2f08f1dc8216
+[1661334967.126][DEBUG]: DevTools HTTP Request: http://localhost:34591/json/version
+[125138:125138:0824/165607.264378:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[1661334967.308][DEBUG]: DevTools HTTP Response: {
+   "Browser": "Chrome/104.0.5112.101",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36",
+   "V8-Version": "10.4.132.22",
+   "WebKit-Version": "537.36 (@0a2e5078088fc9f9a29247aaa40af9e7ada8b79f)",
+   "webSocketDebuggerUrl": "ws://localhost:34591/devtools/browser/e973e7fc-995b-49c9-813a-2f08f1dc8216"
+}
+
+[1661334967.308][DEBUG]: DevTools HTTP Request: http://localhost:34591/json/list
+[1661334967.348][DEBUG]: DevTools HTTP Response: [ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:34591/devtools/page/BB4B11D2B237469F7CFEB62E352863F8",
+   "id": "BB4B11D2B237469F7CFEB62E352863F8",
+   "title": "",
+   "type": "page",
+   "url": "data:,",
+   "webSocketDebuggerUrl": "ws://localhost:34591/devtools/page/BB4B11D2B237469F7CFEB62E352863F8"
+} ]
+
+[1661334967.348][DEBUG]: DevTools HTTP Request: http://localhost:34591/json/list
+[1661334967.357][DEBUG]: DevTools HTTP Response: [ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:34591/devtools/page/BB4B11D2B237469F7CFEB62E352863F8",
+   "id": "BB4B11D2B237469F7CFEB62E352863F8",
+   "title": "",
+   "type": "page",
+   "url": "data:,",
+   "webSocketDebuggerUrl": "ws://localhost:34591/devtools/page/BB4B11D2B237469F7CFEB62E352863F8"
+} ]
+
+[1661334967.359][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1661334967.365][DEBUG]: DevTools WebSocket Command: Page.addScriptToEvaluateOnNewDocument (id=1) BB4B11D2B237469F7CFEB62E352863F8 {
+   "source": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;}) ();"
+}
+[1661334967.365][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=2) BB4B11D2B237469F7CFEB62E352863F8 {
+   "expression": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;}) ();"
+}
+[1661334967.366][DEBUG]: DevTools WebSocket Command: Log.enable (id=3) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.366][DEBUG]: DevTools WebSocket Command: Target.setAutoAttach (id=4) BB4B11D2B237469F7CFEB62E352863F8 {
+   "autoAttach": true,
+   "flatten": true,
+   "waitForDebuggerOnStart": false
+}
+[1661334967.367][DEBUG]: DevTools WebSocket Command: Page.enable (id=5) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.367][DEBUG]: DevTools WebSocket Command: Page.enable (id=6) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[125179:125179:0824/165607.496062:WARNING:sandbox_linux.cc(376)] InitializeSandbox() called with multiple threads in process gpu-process.
+[125179:125179:0824/165607.510041:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.510364:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.510602:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.510794:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.510972:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.511154:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.511362:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.511545:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.511778:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.511975:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.512154:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.512334:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.512508:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.512686:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.512863:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.513035:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.513211:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.513391:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.513571:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.513745:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.513922:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.514112:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.514287:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.514468:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.514642:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.514837:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.515029:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.515207:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.515390:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.515569:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.515743:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.515922:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.516097:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.516271:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.516443:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.516615:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.516786:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.516957:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.517128:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[125179:125179:0824/165607.517303:ERROR:gbm_wrapper.cc(292)] Failed to export buffer to dma_buf: No such file or directory (2)
+[1661334967.548][DEBUG]: DevTools WebSocket Response: Page.addScriptToEvaluateOnNewDocument (id=1) BB4B11D2B237469F7CFEB62E352863F8 {
+   "identifier": "1"
+}
+[1661334967.548][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=2) BB4B11D2B237469F7CFEB62E352863F8 {
+   "result": {
+      "type": "undefined"
+   }
+}
+[1661334967.548][DEBUG]: DevTools WebSocket Response: Log.enable (id=3) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.550][DEBUG]: DevTools WebSocket Response: Target.setAutoAttach (id=4) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.550][DEBUG]: DevTools WebSocket Response: Page.enable (id=5) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.550][DEBUG]: DevTools WebSocket Response: Page.enable (id=6) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.550][DEBUG]: DevTools WebSocket Command: Runtime.enable (id=7) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.554][DEBUG]: DevTools WebSocket Event: Page.loadEventFired BB4B11D2B237469F7CFEB62E352863F8 {
+   "timestamp": 25831.831863
+}
+[1661334967.554][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=8) BB4B11D2B237469F7CFEB62E352863F8 {
+   "awaitPromise": false,
+   "expression": "document.readyState",
+   "returnByValue": true
+}
+[1661334967.555][DEBUG]: DevTools WebSocket Event: Page.frameStoppedLoading BB4B11D2B237469F7CFEB62E352863F8 {
+   "frameId": "BB4B11D2B237469F7CFEB62E352863F8"
+}
+[1661334967.555][DEBUG]: DevTools WebSocket Event: Page.domContentEventFired BB4B11D2B237469F7CFEB62E352863F8 {
+   "timestamp": 25831.833259
+}
+[1661334967.556][DEBUG]: DevTools WebSocket Event: Page.frameResized BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.557][DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated BB4B11D2B237469F7CFEB62E352863F8 {
+   "context": {
+      "auxData": {
+         "frameId": "BB4B11D2B237469F7CFEB62E352863F8",
+         "isDefault": true,
+         "type": "default"
+      },
+      "id": 1,
+      "name": "",
+      "origin": "://",
+      "uniqueId": "5013984013537090636.3604801136413881257"
+   }
+}
+[1661334967.557][DEBUG]: DevTools WebSocket Response: Runtime.enable (id=7) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.558][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=8) BB4B11D2B237469F7CFEB62E352863F8 {
+   "result": {
+      "type": "string",
+      "value": "complete"
+   }
+}
+[1661334967.558][DEBUG]: DevTools WebSocket Command: Page.enable (id=9) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.562][DEBUG]: DevTools WebSocket Response: Page.enable (id=9) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.562][DEBUG]: DevTools WebSocket Command: Runtime.enable (id=10) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.564][DEBUG]: DevTools WebSocket Response: Runtime.enable (id=10) BB4B11D2B237469F7CFEB62E352863F8 {
+}
+[1661334967.565][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=11) BB4B11D2B237469F7CFEB62E352863F8 {
+   "awaitPromise": true,
+   "expression": "(function() { // Copyright (c) 2012 The Chromium Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n/**\n * Enum f...",
+   "returnByValue": true
+}
+[1661334967.574][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=11) BB4B11D2B237469F7CFEB62E352863F8 {
+   "result": {
+      "type": "object",
+      "value": {
+         "status": 0,
+         "value": 1
+      }
+   }
+}
+[1661334967.575][INFO]: [681209749479050f961416c6334495f9] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "104.0.5112.101",
+      "chrome": {
+         "chromedriverVersion": "104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307})",
+         "userDataDir": "/tmp/.com.google.Chrome.ysxS66"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:34591"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "linux",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "681209749479050f961416c6334495f9"
+}
+[1661334967.613][INFO]: [681209749479050f961416c6334495f9] COMMAND Quit {
+}
+[1661334967.713][INFO]: [681209749479050f961416c6334495f9] RESPONSE Quit
+[1661334967.714][DEBUG]: Log type 'driver' lost 0 entries on destruction
+[1661334967.714][DEBUG]: Log type 'browser' lost 0 entries on destruction
