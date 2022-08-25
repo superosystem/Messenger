@@ -10,13 +10,21 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+html {
+  font-size: 14px;
+}
+.form-group {
+  .error {
+    line-height: 1;
+    display: none;
+    margin-top: 5px;
+  }
+}
+.field-error {
+  .error {
+    display: block;
+    color: #ff0000;
+  }
 }
 </style>
