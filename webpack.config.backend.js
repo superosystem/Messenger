@@ -4,7 +4,7 @@ const CURRENT_WORKING_DIR = process.cwd();
 
 const config = {
   name: "backend",
-  entry: [path.join(CURRENT_WORKING_DIR, "./backend/backend.js")],
+  entry: [path.join(CURRENT_WORKING_DIR, "./backend/server.js")],
   target: "node",
   output: {
     path: path.join(CURRENT_WORKING_DIR, "/dist/"),

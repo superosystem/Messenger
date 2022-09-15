@@ -15,11 +15,11 @@ import postRoutes from './routes/post.routes'
  */
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
-import MainRouter from './../client/MainRouter'
+import MainRouter from './../frontend/MainRouter'
 import { StaticRouter } from 'react-router-dom'
 
 import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
-import theme from './../client/theme'
+import theme from './../frontend/theme'
 
 /**
  * Comment out before building for production

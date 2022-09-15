@@ -2,7 +2,7 @@ import config from './../config/config.js'
 import webpack from 'webpack'
 import webpackMiddleware from 'webpack-dev-middleware'
 import WebpackHotMiddleware from 'webpack-hot-middleware'
-import webpackConfig from './../webpack.config.client'
+import webpackConfig from './../webpack.config.backend'
 
 const compile = (app) => {
   if (config.env === "development") {

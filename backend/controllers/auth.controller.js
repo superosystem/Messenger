@@ -1,7 +1,8 @@
 import User from '../models/user.model'
 import jwt from 'jsonwebtoken'
-import expressJwt from 'express-jwt'
 import config from '../../config/config'
+
+const { expressjwt: expressJwt } = require("express-jwt");
 
 /**
  * Singin an account [POST]
@@ -65,6 +66,7 @@ const signout = (req, res) => {
  */
 const requireSignin = expressJwt({
   secret: config.jwtSecret,
+  algorithms: ["HS256"],
   userProperty: 'auth'
 })
 
