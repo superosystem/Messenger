@@ -20,7 +20,7 @@
   "private": true,
   "scripts": {
     "development": "nodemon",
-    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.backend.js",
+    "build": "webpack --config webpack.config.frontend.production.js && webpack --mode=production --config webpack.config.backend.js",
     "start": "NODE_ENV=production node ./dist/backend.generated.js"
   },
   "engines": {

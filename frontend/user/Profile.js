@@ -14,7 +14,7 @@ import Divider from '@material-ui/core/Divider'
 import DeleteUser from './DeleteUser'
 import auth from './../auth/auth-helper'
 import {read} from './api-user.js'
-import {Redirect, Link} from 'react-router-dom'
+import {Navigate, Link} from 'react-router-dom'
 import FollowProfileButton from './../user/FollowProfileButton'
 import ProfileTabs from './../user/ProfileTabs'
 import {listByUser} from './../post/api-post.js'
@@ -112,7 +112,7 @@ export default function Profile({ match }) {
               ? `/api/users/photo/${values.user._id}?${new Date().getTime()}`
               : '/api/users/defaultphoto'
     if (values.redirectToSignin) {
-      return <Redirect to='/signin'/>
+      return <Navigate to='/signin'/>
     }
     return (
       <Paper className={classes.root} elevation={4}>

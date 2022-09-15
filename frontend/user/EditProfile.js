@@ -11,7 +11,7 @@ import FileUpload from '@material-ui/icons/AddPhotoAlternate'
 import { makeStyles } from '@material-ui/core/styles'
 import auth from './../auth/auth-helper'
 import {read, update} from './api-user.js'
-import {Redirect} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -71,7 +71,7 @@ export default function EditProfile({ match }) {
     read({
       userId: match.params.userId
     }, {t: jwt.token}, signal).then((data) => {
-      if (data & data.error) {
+      if (data && data.error) {
         setValues({...values, error: data.error})
       } else {
         setValues({...values, id: data._id, name: data.name, email: data.email, about: data.about})
@@ -113,7 +113,7 @@ export default function EditProfile({ match }) {
                  ? `/api/users/photo/${values.id}?${new Date().getTime()}`
                  : '/api/users/defaultphoto'
     if (values.redirectToProfile) {
-      return (<Redirect to={'/user/' + values.id}/>)
+      return (<Navigate to={'/user/' + values.id}/>)
     }
     return (
       <Card className={classes.card}>
