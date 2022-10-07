@@ -36,4 +36,10 @@ $ cargo audit
 # Web Framework Actix
 $ cargo add actix-web --vers 4.0.0
 $ cargo install cargo-edit
+
+# Run Database with Docker
+$ ./scripts/init_db.sh
+
+# Migrations
+$ sqlx migrate run
 ```
