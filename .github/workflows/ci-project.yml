@@ -71,7 +71,8 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
-          SKIP_DOCKER=true ./scripts/init_db.sh
+          sqlx database create
+          sqlx migrate run
       - name: Run cargo test
         uses: actions-rs/cargo@v1
         with:
@@ -97,7 +98,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:12
+        image: postgres:14
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
@@ -141,7 +142,8 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
-          SKIP_DOCKER=true ./scripts/init_db.sh
+          sqlx database create
+          sqlx migrate run
       - name: Run clippy
         uses: actions-rs/clippy-check@v1
         with:
@@ -196,7 +198,8 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
-          SKIP_DOCKER=true ./scripts/init_db.sh
+          sqlx database create
+          sqlx migrate run
       - name: Run cargo-tarpaulin
         uses: actions-rs/tarpaulin@v0.1
         with:
