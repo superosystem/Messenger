@@ -71,6 +71,7 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
+          export DATABASE_URL=postgres://postgres:password@localhost:5432/postgres
           sqlx database create
           sqlx migrate run
       - name: Run cargo test
@@ -142,6 +143,7 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
+          export DATABASE_URL=postgres://postgres:password@localhost:5432/postgres
           sqlx database create
           sqlx migrate run
       - name: Run clippy
@@ -198,6 +200,7 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
+          export DATABASE_URL=postgres://postgres:password@localhost:5432/postgres
           sqlx database create
           sqlx migrate run
       - name: Run cargo-tarpaulin

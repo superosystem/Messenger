@@ -13,7 +13,7 @@ pub fn run(listener: TcpListener, db_pool: PgPool) -> Result<Server, std::io::Er
             .route("/subscriptions", web::post().to(subscribe))
             .app_data(db_pool.clone())
     })
-        .listen(listener)?
-        .run();
+    .listen(listener)?
+    .run();
     Ok(server)
 }
