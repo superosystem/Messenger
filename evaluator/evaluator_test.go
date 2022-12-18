@@ -215,7 +215,7 @@ if (10 > 1) {
 			"identifier not found: foobar",
 		},
 		{
-			`{"name": "Go"}[fn(x) { x }];`,
+			`{"name": "Test"}[fn(x) { x }];`,
 			"unusable as hash key: FUNCTION",
 		},
 		{
