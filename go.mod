@@ -1,3 +1,3 @@
-module github.com/gusrylmubarok/goco
+module github.com/gusrylmubarok/guuc
 
 go 1.19

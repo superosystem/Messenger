@@ -3,57 +3,64 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/gusrylmubarok/guuc/src/evaluator"
+	"os"
+	"strconv"
 	"time"
 
-	"github.com/gusrylmubarok/goco/compiler"
-	"github.com/gusrylmubarok/goco/evaluator"
-	"github.com/gusrylmubarok/goco/lexer"
-	"github.com/gusrylmubarok/goco/object"
-	"github.com/gusrylmubarok/goco/parser"
-	"github.com/gusrylmubarok/goco/vm"
+	"github.com/gusrylmubarok/guuc/src/compiler"
+	"github.com/gusrylmubarok/guuc/src/lexer"
+	"github.com/gusrylmubarok/guuc/src/object"
+	"github.com/gusrylmubarok/guuc/src/parser"
+	"github.com/gusrylmubarok/guuc/src/vm"
 )
 
-var engine = flag.String("engine", "vm", "use 'vm' or 'eval'")
-
-var input = `
-let fibonacci = fn(x) {
-  if (x == 0) {
-    0
-  } else {
-    if (x == 1) {
-      return 1;
-    } else {
-      fibonacci(x - 1) + fibonacci(x - 2);
-    }
-  }
+const inputTmpl = `
+let fib = fn(x) {
+	if (x == 0) {
+		0
+	} else {
+		if (x == 1) {
+			1
+		} else {
+			fib(x - 1) + fib(x - 2)
+		}
+	}
 };
-fibonacci(35);
+fib(%v)
 `
 
 func main() {
+	engine := flag.String("engine", "vm", "use 'vm' or 'eval'")
+	flag.Usage = usage
 	flag.Parse()
 
-	var duration time.Duration
-	var result object.Object
+	num, err := strconv.Atoi(flag.Arg(0))
+	if err != nil {
+		flag.Usage()
+		os.Exit(2)
+	}
 
-	l := lexer.New(input)
-	p := parser.New(l)
-	program := p.ParseProgram()
+	var (
+		duration time.Duration
+		result   object.Object
+	)
+
+	input := fmt.Sprintf(inputTmpl, num)
+	program := parser.New(lexer.New(input)).ParseProgram()
 
 	if *engine == "vm" {
-		comp := compiler.New()
-		err := comp.Compile(program)
-		if err != nil {
+		start := time.Now()
+
+		c := compiler.New()
+		if err := c.Compile(program); err != nil {
 			fmt.Printf("compiler error: %s", err)
 			return
 		}
 
-		machine := vm.New(comp.Bytecode())
+		machine := vm.New(c.Bytecode())
 
-		start := time.Now()
-
-		err = machine.Run()
-		if err != nil {
+		if err := machine.Run(); err != nil {
 			fmt.Printf("vm error: %s", err)
 			return
 		}
@@ -67,9 +74,10 @@ func main() {
 		duration = time.Since(start)
 	}
 
-	fmt.Printf(
-		"engine=%s, result=%s, duration=%s\n",
-		*engine,
-		result.Inspect(),
-		duration)
+	fmt.Printf("engine=%s, result=%s, duration=%s\n", *engine, result.Inspect(), duration)
+}
+
+func usage() {
+	fmt.Fprintf(flag.CommandLine.Output(), "Usage: %s <integer>\n\n", os.Args[0])
+	flag.PrintDefaults()
 }
