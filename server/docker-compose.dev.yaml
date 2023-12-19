@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  messenger_postgres:
+    container_name: messenger_postgres
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_DB: ${PG_DATABASE}
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+    ports:
+      - "${PG_PORT}:${PG_PORT}"
